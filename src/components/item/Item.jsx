@@ -11,8 +11,9 @@ class Item extends Component {
   render() {
     return (
       <>
+      
         <TodoElement
-          crossed={this.props.crossed}
+          crossed={this.props.crossed} 
         >
           <PinnedIcon
             onClick={this.props.onPinButton}
@@ -20,11 +21,11 @@ class Item extends Component {
             pinned={this.props.pin}
           />
           <Checkbox >
-            <Input onChange={this.props.onClick} type="checkbox" name="todo" checked={this.props.crossed} />
-            <label htmlFor="todo">
+            <Input onChange={this.props.onClick} type="checkbox" name="todo"  checked={this.props.crossed} />
+            <label htmlFor="todo" >
               {this.props.todo}
             </label>
-          </Checkbox>
+          </Checkbox> 
           <Icons >
             <Icon
               onClick={this.props.onDeleteClick}

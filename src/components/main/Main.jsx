@@ -5,10 +5,9 @@ import { Table } from './Style';
 import { InputBox } from './Style';
 import { Icon } from './Style';
 import { Line } from './Style';
-import { DayData } from './Style';
 import { Header } from './Style';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { db } from "../../db";
+import  Timer  from "../Timer/timer";
+import { DayData } from '../main/Style';
 
 
 class Main extends Component {
@@ -19,8 +18,8 @@ class Main extends Component {
       inputVal: "",
       todos: [
         { text: "test 1", crossed: false, pin: false },
-        { text: "test 2", crossed: false, pin: false }
-      ]
+        { text: "test 2", crossed: false, pin: false}
+      ],
     };
 
     this.updateVal = this.updateVal.bind(this);
@@ -47,13 +46,8 @@ class Main extends Component {
       }
     }
   }
-
+  
   render() {
-
-    const date = new Date();
-    const fullDate = db.month[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
-    const day = db.weekday[date.getDay()];
-
     const pinnedItems = this.state.todos
       .filter(el => el.pinned);
     const notPinnedItems = this.state.todos
@@ -64,13 +58,12 @@ class Main extends Component {
       <>
         <Container>
         <Header>
-          <FontAwesomeIcon icon="check"/>
+          <span>✔</span>
           <span> to-do list </span>
         </Header>
           <Table >
             <DayData>
-              <p>{day}</p>
-              <p>{fullDate}</p>
+              <Timer />
             </DayData>
            
             <InputBox>
@@ -89,16 +82,15 @@ class Main extends Component {
               />
             </InputBox>
             <ListItems items={pinnedItems} onCrossItem={this.crossItem} onPinButton={this.onPinButton} onDeleteButton={this.onDeleteButton}/>
-        
-            <ListItems items={notPinnedItems} onCrossItem={this.crossItem} onPinButton={this.onPinButton} onDeleteButton={this.onDeleteButton} />
             <Line />
+            <ListItems items={notPinnedItems} onCrossItem={this.crossItem} onPinButton={this.onPinButton} onDeleteButton={this.onDeleteButton} />
             <ListItems items={crossedItems} onCrossItem={this.crossItem} onPinButton={this.onPinButton} onDeleteButton={this.onDeleteButton} />
           </Table>
         </Container>
       </>
     );
   }
-  
+ 
     
  
   crossItem = el => {

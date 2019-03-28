@@ -8,6 +8,7 @@ export const Container = styled.section `
   width: 500px;
   min-height: 600px;
   max-width: 100%;
+  padding-bottom: 30px;
 `;
 
 export const Header = styled.header `
@@ -18,16 +19,19 @@ export const Header = styled.header `
   padding: 5px 0;
   font-weight: 100;
   color: #f06292;
-  border-bottom: 2px solid #343a40;
+  border-bottom: 2px solid #383d42;
   text-transform: capitalize;
-  span {
+  span:last-of-type {
     padding: 0 10px;
     color: #908d90;
+  }
+  span:first-of-type{
+     content: "✔";
+     font-weight: bold;
   }
 `;
 
 export const Table = styled.section `
-  cursor: pointer;
   padding: 0 30px;
 `;
 
@@ -56,6 +60,7 @@ export const InputBox = styled.div `
 position: relative;
 color: #646b75;
 input {
+  cursor: pointer;
   background: #343a40;
   color: grey;
   width: 100%;
@@ -70,11 +75,11 @@ input {
 }
 `;
 export const Icon = styled(FontAwesomeIcon) `
-position: absolute;
-margin-left: 15px;
-margin-top: 52px;
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 52px;
 `;
 export const Line = styled.hr `
 border: none;
-border-bottom: 2px solid #343a40;
+border-bottom: 2px solid #383d42;
 `;

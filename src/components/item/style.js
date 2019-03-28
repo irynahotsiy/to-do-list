@@ -7,9 +7,11 @@ export const TodoElement = styled.div `
     align-items: center;
     padding: 5px;
     text-decoration: ${props => props.crossed ? "line-through" : "none"};
+    opacity:  ${props => props.crossed ? "0.4" : "1"};
 `;
 
 export const PinnedIcon = styled(FontAwesomeIcon)`
+    cursor: pointer;
     display: ${props => props.pinned ? "block" : "none"};
     transform: rotate(-25deg);
     color: #e65586;
@@ -24,16 +26,33 @@ export const Checkbox = styled.div `
     align-items: center;
     label{
         text-transform: capitalize;
+        width: 100%;
     }
 `;
 
 export const Input = styled.input `
-    width: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 22px;
     height: 20px;
     margin: 0 10px;
-    background: red;
-    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-`;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: white;
+    font-size: 1.1rem;
+    box-shadow: 0px 0px 1.5px 0.5px #000000;
+    &:hover::after{
+        content: "✔";
+    }
+
+    &:checked::after{
+        content:  "✔";
+    }
+
+    `;
 
 
 export const Icons = styled.div `
@@ -42,13 +61,12 @@ export const Icons = styled.div `
 `;
 
 export const Icon = styled(FontAwesomeIcon)`
-    padding: 5px 10px;
+    cursor: pointer;
+    padding: 5px 7px;
+    margin: 0 2px;
     color: white;
     font-size: 1.1rem;
-    &:first-of-type:hover {
-        color: #e0572d;
-    }
-    &:last-of-type:hover {
-        color: #e65586;
+    &:hover {
+        color: grey;
     }
 `;
