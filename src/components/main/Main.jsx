@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import ListItems from "../ListItems/listitems";
+import ListItems from "../ListItems/Listitems";
 import UpdateSettings from "../UpdateSettings/UpdateSettings";
-import { Container } from "./StyleComponent";
-import { Table } from "./StyleComponent";
-import { InputBox } from "./StyleComponent";
-import { Icon } from "./StyleComponent";
-import { Line } from "./StyleComponent";
-import { Header } from "./StyleComponent";
-import { DayData } from "./StyleComponent";
+import { Container } from "./Style";
+import { Table } from "./Style";
+import { InputBox } from "./Style";
+import { Icon } from "./Style";
+import { Line } from "./Style";
+import { Header } from "./Style";
+import { DayData } from "./Style";
 
 class Main extends Component {
   constructor(props) {

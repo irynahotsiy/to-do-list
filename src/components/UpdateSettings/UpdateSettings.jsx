@@ -4,10 +4,11 @@ import { db } from "../../db";
 class UpdateSettings extends Component {
   constructor(props) {
     super(props);
+    let date = new Date();
     this.state = {
-      fullDate: db.month[(new Date).getMonth()] + ' ' + (new Date).getDate() + ', ' + (new Date).getFullYear(),
-      day: db.weekday[(new Date).getDay()],
-      time: (new Date).getUTCMinutes()
+      fullDate: db.month[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear(),
+      day: db.weekday[date.getDay()],
+      time: date.getUTCMinutes()
     }
 
   }
