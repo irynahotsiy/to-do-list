@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Item from '../item/Item';
+import Todo from '../Todo/Todo';
 
 
 class ListItmes extends Component {
     render() {
       return this.props.items.map((el, idx) => (
-        <Item
+        <Todo
           key={idx}
           todo={el.text}
           onClick={e => {
@@ -18,11 +18,18 @@ class ListItmes extends Component {
           }}
           pin={el.pinned}
           onPinButton={e => {
-            debugger;
             e.stopPropagation();
             this.props.onPinButton(el);
           }}
-        />
+          edit = {el.editable}
+          onEdit = { e => {
+            e.stopPropagation();
+            this.props.onClickEdit(el);
+          }}
+          onEdited = { value => {
+            this.props.onEdited(el, value);
+          }}    
+           />
       ));
     }
   }

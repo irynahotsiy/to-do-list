@@ -8,13 +8,14 @@ import { faThumbtack} from '@fortawesome/free-solid-svg-icons'
 
 
 
-import Main from './components/main/Main';
+import Main from './components/Main/Main';
 
 library.add(faTrashAlt);
 library.add(faAlignLeft);
 library.add(faThumbtack);
 
 class App extends Component {
+  
   render() {
     return (
      <>

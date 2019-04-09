@@ -6,8 +6,8 @@ export const TodoElement = styled.div `
     display: flex;
     align-items: center;
     padding: 5px;
-    text-decoration: ${props => props.crossed ? "line-through" : "none"};
     opacity:  ${props => props.crossed ? "0.4" : "1"};
+    text-decoration: ${props => props.crossed ? "line-through" : "none"};
 `;
 
 export const PinnedIcon = styled(FontAwesomeIcon)`
@@ -23,10 +23,20 @@ export const Checkbox = styled.div `
     display: flex;
     position: relative;
     justify-content: flex-start;
+    opacity:  ${props => props.crossed ? "0.4" : "1"};
     align-items: center;
     label{
         text-transform: capitalize;
         width: 100%;
+    }
+    input:last-child{
+        text-transform: capitalize;
+        width: 100%;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 `;
 
