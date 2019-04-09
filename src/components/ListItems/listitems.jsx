@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Item from '../item/Todo';
+import Todo from '../Todo/Todo';
 
 
 class ListItmes extends Component {
     render() {
       return this.props.items.map((el, idx) => (
-        <Item
+        <Todo
           key={idx}
           todo={el.text}
           onClick={e => {
