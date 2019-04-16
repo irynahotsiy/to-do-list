@@ -58,6 +58,11 @@ export const Input = styled.input `
         content: "✔";
         
     }
+    @media (max-width: 512px) {
+        &:hover::after{
+        content: "";
+  }
+}
   
     &:checked::after{
         content:  "✔";
