@@ -6,8 +6,6 @@ export const TodoElement = styled.div `
     display: flex;
     align-items: center;
     padding: 5px;
-    opacity:  ${props => props.crossed ? "0.4" : "1"};
-    text-decoration: ${props => props.crossed ? "line-through" : "none"};
 `;
 
 export const PinnedIcon = styled(FontAwesomeIcon)`
@@ -23,11 +21,12 @@ export const Checkbox = styled.div `
     display: flex;
     position: relative;
     justify-content: flex-start;
-    opacity:  ${props => props.crossed ? "0.4" : "1"};
     align-items: center;
     label{
         text-transform: capitalize;
         width: 100%;
+        text-decoration: ${props => props.crossed ? "line-through" : "none"};
+        opacity:  ${props => props.crossed ? "0.4" : "1"};
     }
     input:last-child{
         text-transform: capitalize;
@@ -50,15 +49,16 @@ export const Input = styled.input `
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    background: #3c424a;
     color: white;
     font-size: 1.1rem;
-    box-shadow: 0px 0px 1.5px 0.5px #000000;
-    /*&:hover::after{
-        content: "✔";
-    }
-    */
+    box-shadow: 0px 0px 1.5px 0.5px #000000; 
 
+    &:hover::after{
+        content: "✔";
+        
+    }
+  
     &:checked::after{
         content:  "✔";
     }

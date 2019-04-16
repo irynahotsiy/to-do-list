@@ -19,14 +19,14 @@ class Todo extends Component {
       <>
 
         <TodoElement
-          crossed={this.props.crossed}
+         
         >
           <PinnedIcon
             onClick={this.props.onPinButton}
             icon="thumbtack"
             pinned={this.props.pin}
           />
-          <Checkbox >
+          <Checkbox  crossed={this.props.crossed}>
             <Input onChange={this.props.onClick} type="checkbox" name="todo" checked={this.props.crossed} />
             {this.props.edit ? <input defaultValue={this.props.todo}  onKeyPress={this.handleKeyPress}/> : <label htmlFor="todo" onClick={this.props.onEdit}>
               {this.props.todo}

@@ -152,7 +152,6 @@ class Main extends Component {
   };
 
   crossItem = el => {
-    debugger;
     const idx = this.state.todos.indexOf(el);
     const todosCopy = this.state.todos.slice();
     todosCopy[idx].crossed = !todosCopy[idx].crossed;
