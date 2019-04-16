@@ -5,7 +5,7 @@ export const TodoElement = styled.div `
     color: white;
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 5px 0;
 `;
 
 export const PinnedIcon = styled(FontAwesomeIcon)`
@@ -13,7 +13,7 @@ export const PinnedIcon = styled(FontAwesomeIcon)`
     display: ${props => props.pinned ? "block" : "none"};
     transform: rotate(-25deg);
     color: #e65586;
-    padding: 0 5px;
+    padding: 5px 0;
 `;
 
 export const Checkbox = styled.div `

@@ -36,6 +36,9 @@ export const Header = styled.header `
 
 export const Table = styled.section `
   padding: 0 30px;
+  @media (max-width: 512px) {
+   padding: 0 15px;
+  }
 `;
 
 export const DayData = styled.div`
