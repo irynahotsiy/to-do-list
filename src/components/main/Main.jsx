@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ListItems from "../ListItems/Listitems";
-import UpdateSettings from "../UpdateSettings/UpdateSettings";
+import UpdateSettings from "../Update/Update";
 import { Container } from "./Style";
 import { Table } from "./Style";
 import { InputBox } from "./Style";

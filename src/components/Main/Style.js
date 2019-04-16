@@ -3,11 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Container = styled.section `
   border-radius: 0.4rem;
-  margin: 30px auto;
   background: #3c424a;
   width: 500px;
-  min-height: 600px;
   max-width: 100%;
+  min-height: 600px;
   padding-bottom: 30px;
 `;
 
