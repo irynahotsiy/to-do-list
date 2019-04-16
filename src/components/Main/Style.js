@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const Container = styled.section `
   border-radius: 0.4rem;
   background: #3c424a;
+  margin: 30px auto;
   width: 500px;
   max-width: 100%;
   min-height: 600px;
