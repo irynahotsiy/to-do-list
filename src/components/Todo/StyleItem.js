@@ -54,9 +54,10 @@ export const Input = styled.input `
     color: white;
     font-size: 1.1rem;
     box-shadow: 0px 0px 1.5px 0.5px #000000;
-    &:hover::after{
+    /*&:hover::after{
         content: "✔";
     }
+    */
 
     &:checked::after{
         content:  "✔";

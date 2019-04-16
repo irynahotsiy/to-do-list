@@ -9,6 +9,9 @@ export const Container = styled.section `
   max-width: 100%;
   min-height: 600px;
   padding-bottom: 30px;
+  @media (max-width: 512px) {
+    margin: 0px auto;
+  }
 `;
 
 export const Header = styled.header `
@@ -83,3 +86,6 @@ export const Line = styled.hr `
 border: none;
 border-bottom: 2px solid #383d42;
 `;
+
+
+
