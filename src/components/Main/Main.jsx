@@ -100,6 +100,7 @@ class Main extends Component {
                 onMouseEnter={() => {
                   this.inputRef.current.focus();
                 }}
+                autoComplete="off"
               />
             </InputBox>
             <ListItems
