@@ -46,6 +46,7 @@ class Main extends Component {
       }
     }
   };
+  
   componentDidMount() {
     this.hydrateStateWithLocalStorage();
     window.addEventListener(
